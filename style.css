@@ -118,7 +118,7 @@ body {
 
 .progress{
     background-color: #000;
-    border-radius: 1 vw;
+    border-radius: 1vw;
     height: 100%;
     width: 0;
     transition: 0.2s ease;

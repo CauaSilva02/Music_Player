@@ -28,7 +28,7 @@ let artistIndex = 2;
 let bgColorIndex = 2;
 
 
-loadSong(songs[songIndex], artist[artistIndex], bgColor[bgColorIndex]);
+loadSong(songs[songIndex], artists[artistIndex], bgColor[bgColorIndex]);
 
 
 
@@ -110,15 +110,15 @@ function prevSong() {
     bgColorIndex--;
 
     if(songIndex < 0){
-        songIndex - songs.length - 1;
+        songIndex = songs.length - 1;
     }
 
     if(artistIndex < 0){
-        artistIndex - artists.length - 1;
+        artistIndex = artists.length - 1;
     }
 
     if(bgColorIndex < 0){
-        bgColorIndex - bgColor.length - 1;
+        bgColorIndex = bgColor.length - 1;
     }
 
     artists.forEach(el => {
@@ -189,7 +189,7 @@ function nextSong() {
         }
     });
 
-    loadSong(songs[songIndex], artist[artistIndex], bgColor[bgColorIndex]);
+    loadSong(songs[songIndex], artists[artistIndex], bgColor[bgColorIndex]);
 
     playSong();
 }
@@ -208,7 +208,7 @@ function setProgress(e) {
     const clickX = e.offsetX;
     const duration = audio.duration;
 
-    audio.currentTime = (click /width) * duration;
+    audio.currentTime = (clickX /width) * duration;
 
 }
 
