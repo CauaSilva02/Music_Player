@@ -19,7 +19,7 @@ let musicNo = document.querySelectorAll(".music_no");
 
 const songs = ['comfortably numb','gravity','borderline','something','earfquake']
 const artists = ['pink floyd','jonh mayer','tame impala','the beatles','tyler the creator']
-const bgColor = ['#E1CAF1','#EFEEE8','#EAEC4C','#8FB7BE','#F5B2C6']
+const bgColor = ['#95463b','#d47370','#6c608b','#5c624d','#ef701f']
 
 // Index song, artist and bg color
 
@@ -71,7 +71,7 @@ function loadSong(song, artistName,bgColorName) {
         ease: "EaseInOut"
     })
 
-    gsap.from(musicContainer, {
+    gsap.to(musicContainer, {
         duration: 1,
         backgroundColor: bgColorName,
         ease: "EaseInOut"
@@ -84,6 +84,7 @@ function loadSong(song, artistName,bgColorName) {
         y: 30,
         ease: "EaseInOut"
     })
+
 
 }
 
